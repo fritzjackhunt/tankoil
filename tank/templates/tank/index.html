@@ -5,17 +5,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tank Oil Impex EU</title>
 
     <!--BOOTSTRAP 5 CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Font Awesome Free's Solid and Brand files -->
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
 
     <!-- Template Main CSS File -->
    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 
 </head>
 <body>
-    <h1>Hello World</h1>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tank Oil Impex</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'pictures/jumbo.jpg' %}"  class="d-block w-100" style="height: 500px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="jumbo-title">Transporting Energy Around The World</h5>
+                    <h2 class="jumbo-subtitle">Excellence Through Experience And Compliance</h2>
+                
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{% static 'pictures/jumbo1.jpg' %}"  class="d-block w-100" style="height: 500px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="jumbo-title">Innovation In The Maritime Transport Industry</h5>
+                    <h2 class="jumbo-subtitle">We Carry Clean Energy</h2>
+                    
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{% static 'pictures/jumbo2.jpg' %}"  class="d-block w-100" style="height: 500px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="jumbo-title">We are committed to the highest standards of safety</h5>
+                    <h2 class="jumbo-subtitle">Our focus on safety is a competitive advantage for our clients</h2>
+                </div>
+
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+        <section>
+            <div class="container-fluid px-5" id="homeAbout">
+                <div class="row px-5">
+                    <div class="col-12 px-5">
+                        <p>PB Tankers is a maritime transport company operating in the Medium Range (MR) tankers market with a fleet built according to the highest standards of quality and reliability and specializing in the transport of Natural Gas (LNG)</p>
+
+                        <p>PB Tankers operates ships through a network of strategic alliances in the maritime transport sector.</p>
+
+                        <p>Our industry is ever-changing and so are we.
+                            PB Tankers has adopted ESG protocols and is leader in sustainability and transparency.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container py-5" id="innovationHome">
+                <div class="row px-5">
+                    <div class="col-12 px-5">
+                        <h3 class="mb-4">INNOVATION AND SUSTAINABILITY</h3>
+
+                        
+
+                        <p>Every day we strive to minimize the impact of our activities. Sustainability and attention to the environment are critical values for us, not just words.</p>
+
+                        <p>
+                            The ISO 9001 Quality Management Systems and ISO 14001 Environmental Management System certifications confirm our dedication to social and cultural aspects, strengthened by operating a fleet built according to the highest quality, reliability, and safety standards.
+                        </p>
+
+                        <p>PB Tankers was the first Italian shipping company to obtain the RINA's Competency Management System Certificate in November 2015.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+          <div class="container-fluid mb-5" id="workUs">
+            <div class="row">
+              <div class="col-6 d-flex justify-content-center align-items-center">
+                <h3 class="pt-1">Work With Us</h3>
+              </div>
+              <div class="col-6 ">
+                <div class="col-8 d-grid gap-2">
+                  <button type="button" class="btn btn-outline-secondary">Our Mission</button>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container" id="liquid">
+            <div class="row">
+
+              <div class="col-4">
+                <div class="row mb-3">
+                  <div class="col-3 liquidImgIcon">
+                    <img src="{% static 'pictures/liquid.png' %}" alt="" style="width: 313; height: 313;">
+                  </div>
+
+                  <div class="col-9 liquidImgText">
+                    <h3>liquefied natural gas carrier</h3>
+                  </div>
+                </div>
+
+                <div>
+                  <h6>THE FUTURE OF ENERGY</h6>
+
+                  <p>LNG is the alternative fuel driving the energy transition in the shipping sector. According to a research conducted by BP Statistical Review of World Energy, in 2020, the global volume of LNG trade reached 488 billion cubic meters. These numbers confirm a steadily growing trend for an alternative energy source that is revolutionizing the maritime transport sector.</p>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="row mb-3">
+                  <div class="col-3 liquidImgIcon">
+                    <img src="{% static 'pictures/liquid1.png' %}" alt="" style="width: 313; height: 313;">
+                  </div>
+
+                  <div class="col-9 liquidImgText">
+                    <h3>OFF-SHORE FLOATING STORAGE</h3>
+                  </div>
+                </div>
+
+                <div>
+                  <h6>
+                    FLOATING STORAGE & OFFLOADING SOLUTIONS
+                  </h6>
+
+                  <p>A Floating Storage and Offloading (FSO) unit is a floating storage vessel used by the oil and gas industry for the storage of hydrocarbons. An FSO is designed to receive hydrocarbons produced from nearby platforms or subsea templates and store oil product until it can be offloaded into a tanker or, less frequently, transported through a pipeline.</p>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="row mb-3">
+                  <div class="col-3 liquidImgIcon">
+                    <img src="{% static 'pictures/liquid2.png' %}" alt="" style="width: 313; height: 313;">
+                  </div>
+
+                  <div class="col-9 liquidImgText">
+                    <h3>SHIPPING AND LOGISTICS</h3>
+                  </div>
+                </div>
+
+                <div>
+                  <h6>
+                    TWO CENTURIES IN THE SHIPPING INDUSTRY
+                  </h6>
+
+                  <p>PB Tankers is a leading company in the area of tanker shipping, holding its own fleet and extensive know-how in the area of hydrocarbon logistics and storage.</p>
+                </div>
+              </div>
+
+             
+
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container-fluid mb-5" id="grad">
+            <div class="row">
+              <div class="col-3">
+                <h3>44,266.71</h3>
+                <h5>CO2 EMMISSIONS (TONS) SAVINGS SINCE JAN 2017</h5>
+              </div>
+
+              <div class="col-3">
+                <h3>1.36</h3>
+                <h5>PSC Deficiency index</h5>
+              </div>
+
+              <div class="col-3">
+                <h3>79.00</h3>
+                <h5>Cre retention rate</h5>
+              </div>
+
+              <div class="col-3">
+                <h3>47,581,073.37</h3>
+                <h5>Total transported cargo (mt) since jan 2017</h5>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container" id="iso">
+            <div class="row">
+              <div class="col-3">
+                <h5>QUALITY & ENVIRONMENTAL CERTIFICATION</h5>
+                <p>Our commitment to social responsibility is a crucial part of our daily work. We belong to the same communities we serve and strive for continuous improvement of our safety and quality measures.</p>
+              </div>
+
+              <div class="col-3">
+                <div>
+                  <h6>ISO 9001:2015</h6>
+                </div>
+
+                <div class="isoImg">
+                  <img src="{% static 'pictures/iso.jpg' %}" alt="" class="isoPic">
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div>
+                  <h6>ISO 14001:2015</h6>
+                </div>
+
+                <div class="isoImg">
+                  <img src="{% static 'pictures/iso1.jpg' %}" alt="" class="isoPic">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+
+        <section>
+          <div class="container-fluid" id="footer">
+              <div class="row">
+                  <div class="col-3">
+                      <div class="footerLogo">
+                          <a href="{% url 'homepage' %}">
+                              <!--  <img src="#" style="max-height: 65px;" alt=""> -->
+                              <h2>Tank Oil Impex</h2>
+                          </a>
+                      </div>
+                  
+                  </div>
+                  <div class="col-3">
+                      <ul>
+                          <a href="#"><li>About Mirrico</li></a>
+                          <a href="#"><li>Sustainabilty And Quality</li></a>
+                          <li>Contacts</li>
+                      </ul>
+                  </div>
+      
+                  <div class="col-3">
+                      <div class="h_right">
+                          <div class="f_search">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                          </div>
+                          
+                          <div class="lang_switcher">
+                              <span>
+                                  <a href="">RU</a>
+                                  <a href="">EN</a>
+                              </span>
+                          </div>
+                          <div>
+                              <div></div>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="col-3" id="footerAdd">
+                     <ul>
+                      <li>420107, Kazan, Ostrovsky str, 84</li>
+                      <li>+7 (843 537-23-93)</li>
+                      <li>info@mirrico.com</li>
+                      <li>Write to us</li>
+                     </ul>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="container-fluid">
+              <div class="row" id="footerBottom">
+                  <div class="col-12 pt-2">
+                      <p>&copy; 2000-2023 - Mirrico Group of Companies</p>
+                  </div>
+              </div>
+          </div>
+      </section>
 
 
 
